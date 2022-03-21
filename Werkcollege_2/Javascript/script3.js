@@ -6,26 +6,24 @@ let student = {
     age: 0, 
     degree: "Default degree", 
     courses: [], 
-    setPersonalDetails: function(name, age, degree){
-        this.name = name;
-        this.age = age;
-        this.degree = degree;
+    setPersonalDetails(details){
+        [this.name,this.age,this.degree]=details;
     }, 
-    addCourse: function(courses){
-        if(courses){
-            this.courses.push(courses);
-        }
+    addCourse(...courses){
+        this.courses = [...this.courses, ...courses];
     }, 
-    showStudent: function(){
+    showStudent(){
         let txt = `Mijn naam is ${this.name}. Ik ben ${this.age} jaar oud en volg ${this.degree} aan EhB.
             Mijn vakken zijn: ${this.courses.join(', ')}.`;
         console.log(txt);
     }
 }
 
-let n = prompt("Name:");
-let a = prompt("Age");
-let d = prompt("Degree:");
+let data = [];
+data.push(prompt("Name:"));
+data.push(prompt("Age:"));
+data.push(prompt("Degree:"));
+student.setPersonalDetails(data);
 
 while(true){
     let c = prompt("Course:");
@@ -37,7 +35,4 @@ while(true){
     }
 }
 
-student.setPersonalDetails(n, a, d);
 student.showStudent();
-
-console.log("hallo");
