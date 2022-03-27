@@ -1,6 +1,8 @@
+//Oefening 4
 "use script";
 
 window.onload = () => {
+    /*
     console.log("loaded");
     document.getElementById("verifyForm").addEventListener("submit", verifyForm);
 
@@ -21,7 +23,15 @@ window.onload = () => {
         else{
             document.getElementById("message").innerHTML = sentence1;
         }
-    } 
+    } */
+
+    //Oefening 7
+    function Capitalize(word){
+        console.log(word.slice(0,1).toUpperCase() + word.substrate(1));
+    }
+
+    let naam = "alesia";
+    let achternaam = bruffaerts;
 
     /* oefening 8 probeersel
     
