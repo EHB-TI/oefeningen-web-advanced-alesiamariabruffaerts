@@ -2,7 +2,7 @@
 "use script";
 
 window.onload = () => {
-    /*
+    
     console.log("loaded");
     document.getElementById("verifyForm").addEventListener("submit", verifyForm);
 
@@ -23,55 +23,58 @@ window.onload = () => {
         else{
             document.getElementById("message").innerHTML = sentence1;
         }
-    } */
+    } 
 
     //Oefening 7
-    function Capitalize(word){
-        console.log(word.slice(0,1).toUpperCase() + word.substrate(1));
+    function capitalize(word){
+        console.log(word.slice(0,1).toUpperCase() + word.substr(1));
     }
 
     let naam = "alesia";
-    let achternaam = bruffaerts;
+    let achternaam = "bruffaerts";
 
-    /* oefening 8 probeersel
-    
-    let text = "alesia bruffaerts";
-    let char = text.charAt(0);
-    let char1 = char.toUpperCase();
-    let text1 = text.slice(1);
-    let text2 = char1.concat(text1);
-    console.log(text2);*/
+    capitalize(naam);
+    capitalize(achternaam);
 
-    /* Oefening 9
+
+    //Oefening 8
+    function capitalize1(word){
+        word = word.trim();
+        let words = word.split(" ");
+        for(let part in words){
+            words[part] = words[part].slice(0,1).toUpperCase() + words[part].substr(1);
+        }
+        console.log(words.join(" "));
+    }
+
+    let volleNaam = "alesia bruffaerts   ";
+    capitalize1(volleNaam);
+
+    //Oefening 9
     
     let sentence = 'Javascript is the main focus of Web Essentials';
     let sentence1 = sentence.replace("Essentials","Advanced");
     console.log(sentence1);
 
-    Oefening 10
+    //Oefening 10
 
-    function zoekLangste(landen[]){
-        for(let i=0;i<landen.length;i++){
-            let langsteLengte = 0;
-            let langste;
-            if(landen[i].length > langsteLengte){
-                langsteLengte = landen[i].length;
-                langste = landen[i];
+    function zoekLangste(...landen){
+        let langste = "";
+        for(let land in landen){
+            if(langste.length < landen[land].trim().length){
+                langste = landen[land].trim();
             }
-            return langste;
         }
-
-    let landen = ["Belgie","Duitsland","Frankrijk"];
-    zoekLangste(landen);
-    }*/
-
-    /*
+        return langste;
+    }
+    console.log(zoekLangste("Belgie","Duitsland","Frankrijk","verenigdestatenvanamerika"));
     
-    Oefening 12
-    const d = getDate();
-    const m = getMonth();
-    const y = getFullYear();
+    
+    //Oefening 12
+    const d = new Date();
+    const maanden = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    const maand = maanden[d.getMonth()];
 
-    console.log(d + " " + m + " " + y);*/
+    console.log(d.getDate() + " " + maand + " " + d.getFullYear());
 
 }
