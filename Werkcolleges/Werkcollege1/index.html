@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Werkcollege 1</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+
+</head>
+<body>
+    <div class="container">
+        <h1>Verify your identity</h1>
+        <div class="row">
+            <form class="col s12" id="verifyForm">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input type="text" class="validate" id="inputFirstname" required>
+                        <label for="inputFirstname">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">3p</i>
+                        <input type="number" class="validate" id="inputAge">
+                        <label for="inputAge">Age</label>
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit">Submit <i class="material-icons left">send</i>
+                </button>
+            </form>
+        </div>
+        <hr>
+        <div id="message">
+
+        </div>
+    </div>
+<script src="Javascript/script2.js"></script>
+</body>
+</html>
